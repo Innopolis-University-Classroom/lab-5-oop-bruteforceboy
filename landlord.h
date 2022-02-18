@@ -24,6 +24,7 @@ class tenant {
  public:
   tenant(string n, int aNo);
   ~tenant();
+  string getName();
   int getAptNumber();
   // needed for use in ‘set’
   friend bool operator < (const tenant&, const tenant&);
