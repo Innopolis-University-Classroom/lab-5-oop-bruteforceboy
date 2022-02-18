@@ -53,16 +53,24 @@ int tenantList::getAptNo(string tenant) {
   return -1; // returns if the tenant's name was not found in our set
 }
 
+void tenantList::display() {
+  for (auto& t : setPtrsTens) {
+    cout << t->getName() << ' ' << t->getAptNumber() << endl;
+  }
+}
+
 int main() {
-  tenant tenantObj1("wilson", 134);
-  tenant tenantObj2("fred", 543);
+  // tenant tenantObj1("wilson", 134);
+  // tenant tenantObj2("fred", 543);
 
-  cout << tenantObj1 << endl;
-  cout << tenantObj2 << endl;
+  // cout << tenantObj1 << endl;
+  // cout << tenantObj2 << endl << endl;
 
-  tenantList list;
-  list.insertTenant(&tenantObj1);
-  list.insertTenant(&tenantObj2);
+  // tenantList list;
+  // list.insertTenant(&tenantObj1);
+  // list.insertTenant(&tenantObj2);
 
-  cout << list.getAptNo("fred") << endl;
+  // cout << list.getAptNo("fred") << endl << endl;
+
+  // list.display();
 }
